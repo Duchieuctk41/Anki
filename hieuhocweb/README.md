@@ -1,2 +1,0 @@
-# hieuhocweb
-toi la hieu
