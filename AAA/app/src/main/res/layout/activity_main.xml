@@ -6,7 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:background="@color/silver">
+    android:background="@drawable/background">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_background">
 
     <ProgressBar
         android:id="@+id/seekBar"
@@ -41,5 +47,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </GridView>
+</LinearLayout>
 
 </LinearLayout>
