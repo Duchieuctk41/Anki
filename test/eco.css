@@ -158,7 +158,6 @@ body{
 
 }
 #body3{
-
 	margin-top: 40px;
 	height: 200px;
 	clear: both;
@@ -296,4 +295,78 @@ body{
 	height: 75px;
 	width: 6px;
 	margin: 100px 0 0 -85px;
+}
+#posts{
+	background-color: #61a93e;
+	overflow: hidden;
+}
+#posts .heading{
+	width: 940px;
+	text-align: center;
+	margin: 0 auto; 
+}
+#posts .heading h1{
+	margin: 80px 0;
+	color: #fff;
+	font-size: 32px;
+}
+#posts ul{
+	list-style: none;
+	width: 1250px;
+	height: 500px;
+	margin: 0 auto;
+	color: #423932;
+}
+#posts ul li{
+	width: 270px;
+	height: 500px;
+	display: inline;
+	float: left;
+	background-color: #fff;
+	margin-right: 25px ;
+	border-radius: 5px;
+}
+#posts div img{
+	height: 200px;
+	width: 270px;
+	
+}
+#posts p{
+	padding-top: 20px;
+	width: 270px;
+	overflow: hidden;
+	font-size: 13px;
+}
+#posts h3{
+	font-size: 18px;
+	padding: 20px 20px 0;
+	margin: 0;
+}
+#posts p.link{
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 10px 0 20px 0;
+	padding: 0 20px;
+	
+}
+.foonote{
+	width: 270px;
+	height: 60px;
+	display: flex;
+	border-top: .5px solid #dfe4ea;
+}
+.foonote p{
+	font-size: 13px;
+}
+.foonote .left{
+	margin: 0 0 0 10px;
+	float: left;
+}
+.foonote p.right{
+	float: right;
+	margin: 0 0 0 50px ;
+}
+.foonote p span{
+	margin: 0 6px ;
+	color: #636e72;
 }
