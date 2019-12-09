@@ -1,0 +1,299 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Slab', serif;
+}
+
+#page{
+	background: #fafcf6;
+	font-family: 'Roboto Slab', serif;
+	color: #423932;
+}
+#header{
+	height: 35px;
+	border-bottom: .5px solid #dfe4ea;
+
+}
+#header div{
+	width: 940px;
+	margin: auto;
+	padding: 10px 0;
+	overflow: hidden;
+
+}
+#header p{
+	display: inline;
+	margin-right: 30px;
+	color: #bfbbbb;
+	font-size: 11px;
+	float: left;
+}
+#header ul{
+	list-style-type: none;
+	float: right;
+}
+#header li{
+	display: inline;
+	margin: 3px;
+}
+#header a{
+	text-decoration: none;
+	color: #afaba7;
+}
+#header a:hover{
+	color: #61a93e;
+}
+#mid_hd{
+	height: 94px;
+	border-bottom: .5px solid #dfe4ea;
+}
+#mid_hd div{
+	padding: 30px 0;
+}
+ #mid_hd #logo{
+	
+	   width: 200px;
+	   margin: 0 auto;
+}
+#mid_hd a.glyphicon{
+	float: right;
+	margin: -60px 20px 0 0;
+	color: #afaba7;
+
+}
+/*menu*/
+#menu{
+	height: 39px;
+	border-bottom: .5px solid #dfe4ea;
+
+}
+#menu div{
+	width: 940px;
+	margin: 0 auto;
+	text-align: center;
+}
+#menu ul{
+	list-style-type: none;
+	padding-top: 9px;
+}
+#menu li{
+	display: inline;
+}
+#menu a{
+	color: #423932;
+	font-size: 15px;
+	padding: 10px 25px;
+	text-decoration: none;
+	border-right: 1px solid #dfe4ea ;
+	text-align: center;
+	font-weight: normal;
+}
+#menu a:hover{
+	color: #fff;
+	background-color: #61a93e;
+
+}
+#menu a.first{
+	color: #fff;
+	background-color: #61a93e;	
+}
+/*body*/
+#body{
+	background-color: #61a93e;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#body1{
+	width: 940px;
+	margin: 60px auto;
+	text-align: center;
+	border-bottom: 1px solid #fff;
+	height: 100px;
+}
+#body1 h2{
+	font-size: 32px;
+}
+#body2 ul{
+	list-style: none;
+	width: 940px;
+	margin: 0 auto;
+
+}
+#body2 ul li{
+	float: left;
+	height: 430px;
+	padding: 0;
+	text-align: center;
+	width: 220px;
+}
+#body2 ul li i{
+	font-size: 60px;
+	padding: 20px;
+}
+#body2 h1{
+	font-size: 28px;
+	margin: 0 0 20px 0;
+}
+#body2 p{
+	font-size: 13px;
+	padding: 0 20px;
+	width: 220px;
+	margin-bottom: 40px;
+	line-height: 1.5em;
+}
+#body2 a{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+	padding: 15px 20px;
+	border-radius: 40px;
+	border: 2px solid #fff;
+	text-decoration: none;
+}
+#body2 a:hover{
+	color: #61a93e;
+	background: #fff;
+
+}
+#body3{
+
+	margin-top: 40px;
+	height: 200px;
+	clear: both;
+	
+}
+#body3 div{
+	margin: 0 auto;
+	width: 940px;
+	border-top: 1px solid #fff;
+	padding: 60px 250px;
+
+}
+#body3 p{
+	font-size: 18px;
+	text-align: center;
+	line-height: 1.5em;
+}
+#rcm{
+	height: 910px;
+	background: #423932;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#rcm1{
+	width: 1062px;
+	margin: 80px auto ;
+}
+#rcm1 h1{
+	color: #fff;
+	font-size: 32px;
+	margin: 0 0 80px;
+	text-align: center;
+
+}
+#rcm1 ul{
+	list-style: none;
+	width: 1062px;
+	height: 800px;
+	margin: 0;
+	padding: 0;
+}
+#rcm1 ul li img{
+	height: 177px;
+	width: 218.5px;
+	display: block;
+	margin: 1px .5px 15px;
+	border-radius: 5px 5px 0 0 ;
+}
+#rcm1 ul li{
+	float: left;
+	margin: 0 20px 40px;
+	width: 220px;
+	background: #fff;
+	height: 253px;
+	border-radius: 5px;
+	border: .3px solid #fff;
+
+}
+#rcm1 a{
+	text-decoration: none;
+	margin: 0 25px;
+}
+#rcm1 a.link{
+	font-size: 18px;
+	color: #423932;
+}
+#rcm1 a.link:hover{
+	color: #61a93e ;
+}
+#rcm1 .image{
+	color: #61a93e;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+#main{
+	height: 650px;
+}
+#our1{
+	height: 110px;
+	text-align: center;
+	margin-top: 80px;
+}
+#our1 h1{
+	color: #423932;
+	font-size: 32px;
+}
+#our2{
+	height: 600px;
+	margin: 0 auto;
+	display: flex;
+	width: 980px;
+}
+#our2 div{
+	width: 450px;
+	float: left;
+}
+#our2 ul{
+	width: 450px;
+	list-style: none;
+
+}
+#our2 li{
+	height: 175px;
+}
+#our2 h3{
+	font-size: 17px;
+	margin: 0 0 10px;
+}
+#our2 p{
+	padding: 0 0 20px;
+	font-size: 13px;
+}
+#our2 div.icon{
+	height: 100px;
+	width: 100px;
+	border: .5px solid #dfe4ea;
+	text-align: center;
+	padding: 30px ;
+	border-radius: 50%;
+	color: #61a93e;
+	margin: 0 30px 0 0;
+}
+#our2 .icon:hover{
+	background-color: #61a93e;
+	color: #fcfaf6;
+	transition-duration: .8s;
+
+}
+#our2 div.icon i{
+	font-size: 30px;
+}
+#our2 .border{
+	border-right: 1px solid #dfe4ea ;
+	height: 75px;
+	width: 6px;
+	margin: 100px 0 0 -85px;
+}
