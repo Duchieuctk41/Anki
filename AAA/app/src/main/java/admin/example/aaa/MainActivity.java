@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    /*them dong nay cho vui*/
 
     private void Anhxa() {
         gridView = (GridView) findViewById(R.id.gridview);
