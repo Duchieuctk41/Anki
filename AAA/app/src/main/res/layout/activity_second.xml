@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/color_dialog"
+
+    >
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Great"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:background="@color/orange"
+        android:textSize="50dp"
+        >
+    </TextView>
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/laugh"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/laugh"
+        >
+    </ImageView>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            >
+        </TextView>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/trophy">
+        </ImageView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btcontinue"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="continue"
+        android:textSize="30dp"
+        >
+    </Button>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Exit"
+        android:textSize="30dp"
+
+        android:layout_marginBottom="50dp"
+        >
+    </Button>
+
+
+</LinearLayout>

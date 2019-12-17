@@ -4,12 +4,14 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -40,47 +42,76 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Anhxa();
-        Adapter gridviewadapter = new Adapter(this,hinh);
+        final Adapter gridviewadapter = new Adapter(this,hinh);
         gridView.setAdapter(gridviewadapter);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> list = new ArrayList<String>();
-                list.add("Grape");list.add("Orange");list.add("Avocado");
-                list.add("Apple");list.add("Banana");list.add("Coconut");
-                list.add("Strawberry");list.add("Papaya");list.add("Watermelon");
+                final List<String> list = new ArrayList<String>();
+                list.add("Apple");list.add("Avocado");list.add("Banana");
+                list.add("Coconut");list.add("Grape");list.add("Papaya");
+                list.add("Strawberry");list.add("Watermelon");list.add("Pineapple");
 
                 Random random = new Random();
-                String question = list.get(random.nextInt(list.size()));
+                final String question = list.get(random.nextInt(list.size()));
                 textView.setText(question);
+                gridView.setAdapter(gridviewadapter);
+                CountDownTimer countDownTimer = new CountDownTimer(10400,50) {
 
-
-                CountDownTimer countDownTimer = new CountDownTimer(110,100) {
                     @Override
                     public void onTick(long millisUntilFinished) {
                         int current = progressBar.getProgress();
-
-                        progressBar.setProgress(current - 200);
                         if(current<=0)
                         {
-                            Dialog();
+
+                            Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
+                            startActivity(intent);
 
                         }
+
+                        progressBar.setProgress(current - 1);
+
 
                     }
 
                     @Override
                     public void onFinish() {
-                        Toast.makeText(MainActivity.this,"TIME OVER",Toast.LENGTH_SHORT).show();
+
+
 
                     }
                 };
+
+
+
+                gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        //position: tra ve vi tri click
+                        if(question == list.get(position))
+                        {
+                            Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                            startActivity(intent);
+                        }
+                        else {
+                            Intent intent = new Intent(MainActivity.this,FourActivity.class);
+                            startActivity(intent);
+
+                        }
+
+                    }
+
+                });
                 countDownTimer.start();
+
+
+
+
 
             }
         });
     }
-    /*them dong nay*/
+
 
     private void Anhxa() {
         gridView = (GridView) findViewById(R.id.gridview);
@@ -88,18 +119,5 @@ public class MainActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
         textView = (TextView) findViewById(R.id.textView);
     }
-    private void Dialog(){
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.custom_dialog);
-        final ImageView animation = (ImageView) dialog.findViewById(R.id.animation);
-        final Animation animRotate = AnimationUtils.loadAnimation(this,R.anim.anim_);
-        /*animation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.startAnimation(animRotate);
-            }
-        });*/
-        animation.startAnimation(animRotate);
-        dialog.show();
-    }
+
 }
