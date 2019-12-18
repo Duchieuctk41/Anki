@@ -26,8 +26,14 @@ public class FourActivity extends AppCompatActivity {
             }
         });
         final ImageView imgrotate = (ImageView) findViewById(R.id.laugh);
+        final ImageView star = (ImageView) findViewById(R.id.star);
+        final ImageView star2 = (ImageView) findViewById(R.id.star2);
+
         final Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_);
+        final Animation animation2 = AnimationUtils.loadAnimation(this,R.anim.anim_star);
         imgrotate.startAnimation(animation);
+        star.startAnimation(animation2);
+        star2.startAnimation(animation2);
 
 
 
