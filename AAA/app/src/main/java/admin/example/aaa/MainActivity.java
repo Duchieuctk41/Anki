@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import org.w3c.dom.Text;
 
@@ -27,9 +28,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     GridView gridView;
-    Button button;
+    Button button, back;
     ProgressBar progressBar;
-    TextView textView;
+    TextView textView,point;
+    int diem = 0;
 
     int[] hinh ={
             R.drawable.apple,R.drawable.avocado,R.drawable.banana,
@@ -42,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Anhxa();
+        Intent intent = getIntent();
+        int noidung = intent.getIntExtra("diemso",0);
+        diem = diem + noidung;
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"leuleu",Toast.LENGTH_SHORT).show();
+            }
+        });
         final Adapter gridviewadapter = new Adapter(this,hinh);
         gridView.setAdapter(gridviewadapter);
         button.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 final String question = list.get(random.nextInt(list.size()));
                 textView.setText(question);
                 gridView.setAdapter(gridviewadapter);
-                CountDownTimer countDownTimer = new CountDownTimer(10400,50) {
+                CountDownTimer countDownTimer = new CountDownTimer(10480,50) {
 
                     @Override
                     public void onTick(long millisUntilFinished) {
@@ -64,8 +76,11 @@ public class MainActivity extends AppCompatActivity {
                         if(current<=0)
                         {
 
-                            Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
+                            Intent intent = new Intent(MainActivity.this,FourActivity.class);
                             startActivity(intent);
+
+
+
 
                         }
 
@@ -88,16 +103,24 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         //position: tra ve vi tri click
-                        if(question == list.get(position))
+                        if(question.equals(list.get(position)))
                         {
                             Intent intent = new Intent(MainActivity.this,SecondActivity.class);
                             startActivity(intent);
-                        }
-                        else {
-                            Intent intent = new Intent(MainActivity.this,FourActivity.class);
-                            startActivity(intent);
+                            overridePendingTransition(R.anim.anim_enter,R.anim.anim_exit);
+                            point.setText(""+ diem);
+
+
 
                         }
+                        else {
+                            Intent intent = new Intent(MainActivity.this,ThirdActivity.class);
+                            startActivity(intent);
+                            overridePendingTransition(R.anim.anim_enter,R.anim.anim_exit);
+
+
+                        }
+
 
                     }
 
@@ -106,11 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
             }
         });
+        point.setText(""+ diem);
     }
+
 
 
     private void Anhxa() {
@@ -118,6 +141,9 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
         textView = (TextView) findViewById(R.id.textView);
+        back = (Button) findViewById(R.id.back);
+        point = (TextView) findViewById(R.id.point);
+
     }
 
 }

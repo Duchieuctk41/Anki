@@ -9,9 +9,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
     Button btcontinue;
+    TextView point;
+
 
 
     @Override
@@ -23,12 +26,23 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this,MainActivity.class);
+                intent.putExtra("diemso",+5);
                 startActivity(intent);
+
             }
         });
         final ImageView imgrotate = (ImageView) findViewById(R.id.laugh);
+        final ImageView star = (ImageView) findViewById(R.id.star);
+        final ImageView star2 = (ImageView) findViewById(R.id.star2);
+
         final Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_);
+        final Animation animation2 = AnimationUtils.loadAnimation(this,R.anim.anim_star);
         imgrotate.startAnimation(animation);
+        star.startAnimation(animation2);
+        star2.startAnimation(animation2);
+
+
+
 
 
 

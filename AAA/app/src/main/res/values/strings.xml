@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Picture Tapping</string>
     <string name="button">Start</string>
-    <string name="textview">textview</string>
+    <string name="textView">Question</string>
+    <string name="enter_second">Great</string>
+    <string name="enter_third">Wrong</string>
+    <string name="enter_four">Time Over</string>
+
 </resources>
